@@ -1,0 +1,142 @@
+.header {
+  display: flex;
+  background: url("../img/header/bg.png");
+  height: 50px;
+  align-items: center;
+}
+
+.header-left-angle {
+  flex: 0 0 11%;
+  height: 100%;
+  padding: 0 2px 2px 0;
+  box-sizing: border-box;
+}
+
+.header-logo {
+  flex: 0 0 18%;
+  background: url("../img/header/bg-red.png");
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 2px 2px 2px;
+}
+
+.header-middle-spliter {
+  flex: 0 0 26%;
+  height: 100%;
+  padding-left: 2px;
+  box-sizing: border-box;
+}
+.header-middle-spliter .border-bottom {
+  position: absolute;
+  top: 45px;
+  width: 70.5%;
+  width: calc(71% - 2px);
+  height: 3px;
+  background: url("../img/header/dot.png") repeat-x;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 0 0 34%;
+  height: 100%;
+}
+
+.toggle-nav {
+  display: none;
+  flex: 0 0 46%;
+  justify-content: flex-end;
+}
+
+.header-right-angle {
+  flex: 0 0 11%;
+  height: 100%;
+}
+
+
+@media(max-width: 950px) {
+  .header-left-angle {
+    flex: 0 0 5%;
+  }
+
+  .header-logo {
+    flex: 0 0 24%;
+  }
+
+  .header-middle-spliter {
+    flex: 0 0 26%;
+  }
+  .header-middle-spliter .border-bottom {
+    width: 70.5%;
+    width: calc(71% - 2px);
+  }
+
+  .header-nav {
+    flex: 0 0 40%;
+  }
+  .header-right-angle {
+    flex: 0 0 5%;
+  }
+}
+
+@media(max-width: 780px) {
+  .header-logo {
+    flex: 0 0 25%;
+  }
+  
+  .header-middle-spliter {
+    flex: 0 0 7%;
+  }
+  .header-middle-spliter .border-bottom {
+    width: 69.5%;
+    width: calc(70% - 2px);
+    background-size: 5px;
+    top: 47px;
+  }
+  
+  .header-nav {
+    flex: 0 0 58%;
+  }
+  
+}
+
+
+@media(max-width: 600px) {
+  .header-logo {
+    flex: 0 0 37%;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .toggle-nav{
+    display: flex;
+  }
+
+  .header-middle-spliter .border-bottom {
+    width: 57.5%;
+    width: calc(58% - 2px);
+  }
+}
+
+@media(max-width: 400px) {
+  .header {
+    height: 40px;
+  }
+
+  .header-logo {
+    flex: 0 0 50%;
+  }
+
+  .header-middle-spliter .border-bottom {
+    top: 36px;
+    width: 44.5%;
+    width: calc(45% - 2px);
+  }
+
+  .toggle-nav {
+    flex: 0 0 33%;
+  }
+}

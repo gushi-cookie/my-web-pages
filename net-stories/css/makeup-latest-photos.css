@@ -1,0 +1,45 @@
+#latest-photos .aside-section-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.latest-photo {
+  margin: 0 2% 2% 2%;
+}
+
+.latest-photo img {
+  width: 100%;
+}
+
+
+.more-photos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 95%;
+}
+
+.more-photos a {
+  color: #6d6e76;
+  font: 12px "Lucia Grande";
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.more-photos-icon {
+  width: 16px;
+  height: 16px;
+  background: url("../img/icons.png") -178px -4px;
+}
+
+
+@media(max-width: 300px) {
+  #latest-photos .aside-section-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .latest-photo {
+    margin: 0 0 2% 0;
+  }
+}

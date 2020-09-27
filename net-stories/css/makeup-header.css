@@ -1,0 +1,142 @@
+.header-left-angle .border {
+  height: 100%;
+  background:
+    url("../img/header/right-angle.png") right bottom no-repeat,
+    url("../img/header/dot.png") right bottom repeat-x,
+    url("../img/header/dot-turned.png") right 2px repeat-y;
+}
+
+.header-logo .border {
+  display: flex;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+
+  background: 
+    url("../img/header/left-angle-red.png") left bottom no-repeat,
+    url("../img/header/right-angle-red.png") right bottom no-repeat,
+    url("../img/header/dot-turned-red.png") left repeat-y,
+    url("../img/header/dot-red.png") bottom left repeat-x,
+    url("../img/header/dot-turned-red.png") right bottom repeat-y;
+}
+.header-logo a {
+  color: white;
+  text-decoration: none;
+  font-family: "Daniel";
+  font-size: 31px;
+  text-shadow: 2px 2px 3px black;
+  text-align: center;
+}
+
+.header-middle-spliter .border-left {
+  position: absolute;
+  height: 48px;
+  width: 6px;
+  background: 
+    url("../img/header/left-angle.png") left bottom no-repeat,
+    url("../img/header/dot-turned.png") left repeat-y;
+}
+
+.header-nav a {
+  color: #898888;
+  text-decoration: none;
+  font-family: "Trebuchet MS";
+  font-size: 14px;
+}
+.header-nav a:hover {
+  color: #a6a6a6;
+}
+.header-nav a:active, .header-nav .active {
+  color: #c8c8c8;
+}
+
+.toggle-nav .menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background: url("../img/header/bg.png");
+  padding: 2px;
+  box-sizing: border-box;
+}
+.toggle-nav .border {
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  
+  background: 
+    url("../img/header/dot.png") left bottom repeat-x,
+    url("../img/header/dot-turned.png") left bottom repeat-y,
+    url("../img/header/dot-turned.png") right bottom repeat-y,
+    url("../img/header/dot.png") left top repeat-x;
+
+  background-size: 5px, 2px, 2px, 5px;
+}
+.toggle-nav a {
+  text-decoration: none;
+  color: #898888;
+  font-family: "Trebuchet MS";
+}
+.toggle-nav a:active, .toggle-nav .active {
+  background-color: #c8c8c8;
+}
+.toggler {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: url("../img/header/menu-toggle.png");
+}
+.toggler[data-is-active=true] {
+  background-position-x: 26px;
+}
+
+
+@media(max-width: 780px) {
+  .header-left-angle .border {
+    background-size: 3px, 5px, 2px;
+  }
+
+  .header-logo .border {
+    background-size: 4px, 4px, 2px, 5px, 2px;
+  }
+  .header-logo a {
+    font-size: 26px;
+  }
+
+  .header-middle-spliter .border-left {
+    background-size: 3px, 2px;
+  }
+}
+
+@media(max-width: 600px) {
+  .header-logo a {
+    font-size: 28px;
+  }
+}
+
+@media(max-width: 400px) {
+  .header-middle-spliter .border-left {
+    height: 37px;
+  }
+
+  .toggle-nav .menu {
+    top: 40px;
+  }
+  .toggler {
+    margin-bottom: 6px;
+  }
+}
+
+@media(max-width: 320px) {
+  .header-logo a {
+    font-size: 24px;
+  }
+}
+
+@media(max-width: 300px) {
+  .header-logo a {
+    font-size: 20px;
+  }
+}

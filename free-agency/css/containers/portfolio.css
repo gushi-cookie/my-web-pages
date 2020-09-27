@@ -1,0 +1,70 @@
+.portfolio {
+  background-color: #de2b24;
+  padding: 4em 0;
+}
+
+.portfolio-projects {
+  width: 76%;
+  max-width: 1025px;
+  margin: 0 auto;
+  padding-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project {
+  width: 25%;
+}
+
+
+
+
+/*
+  mediaqueries
+*/
+@media(max-width: 1100px) {
+  .portfolio-projects {
+    width: 98%;
+  }
+}
+
+
+
+@media(max-width: 900px) {
+  .portfolio {
+    padding: 2.5em 0;
+  }
+
+  .portfolio-projects {
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  .project {
+    width: 50%;
+  }
+
+  .project:nth-child(1) .project-info,
+  .project:nth-child(4) .project-info,
+  .project:nth-child(5) .project-info,
+  .project:nth-child(8) .project-info
+  {
+    opacity: 1 !important;
+  }
+
+  .project:nth-child(2) .project-info,
+  .project:nth-child(3) .project-info,
+  .project:nth-child(6) .project-info,
+  .project:nth-child(7) .project-info
+  {
+    opacity: 0 !important;
+  }
+}
+
+
+
+@media(max-width: 400px) {
+  .project {
+    font-size: 0.7em;
+  }
+}

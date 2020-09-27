@@ -1,0 +1,45 @@
+.about-me-top {
+  border-bottom: 1px solid #444545;
+  margin-bottom: 18px;
+  padding: 8px 0;
+}
+
+.about-me-content {
+  display: flex;
+}
+
+.about-me-avatar-container {
+  margin-top: 5px;
+}
+
+.about-me-header {
+  font: 22px "Pacifico";
+  color: #f7f6f0;
+  margin: 0;
+}
+
+.about-me-text {
+  font: 12px "Tahoma";
+  color: #afafaf;
+  line-height: 22px;
+  padding: 0 5% 0 1%;
+}
+
+@media(max-width: 250px) {
+  .about-me-content {
+    display: block;
+  }
+
+  .about-me-avatar {
+    width: 100%;
+    display: block;
+  }
+
+  .about-me-avatar-container {
+    float: left;
+    width: 25%;
+    margin-right: 2%;
+  }
+
+  
+}

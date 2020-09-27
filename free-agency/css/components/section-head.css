@@ -1,0 +1,63 @@
+.section-head {
+  text-align: center;
+}
+
+
+
+
+/*
+  defaults & grey
+*/
+.section-head-header {
+  font: bold 1.5em "Helvetica", sans-serif;
+  color: #424242;
+  margin: 0;
+}
+
+.section-head-lore {
+  font: 300 1em "Helvetica", sans-serif;
+  color: #424242;
+  margin: 0;
+  margin-bottom: 0.7em;
+  padding: 0 1%;
+}
+
+.section-head-bar {
+  width: 1.96em;
+  height: 0.23em;
+  background-color: #424242;
+  margin: 0 auto;
+}
+
+
+
+
+/*
+  white
+*/
+.section-head-white .section-head-header,
+.section-head-white .section-head-lore {
+  color: #fff;
+}
+
+.section-head-white .section-head-bar {
+  background-color: #fff;
+}
+
+
+
+
+/*
+  mediaqueries
+*/
+@media(min-width: 1400px) {
+  .section-head {
+    font-size: 1.25em;
+  }
+}
+
+@media(max-width: 500px) {
+  .section-head {
+    font-size: 0.8em;
+  }
+}

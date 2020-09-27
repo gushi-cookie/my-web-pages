@@ -1,0 +1,17 @@
+body {
+  font-size: 20px;
+  font-family: "MyriadPro";
+  min-width: 980px;
+}
+
+@media(min-width: 1400px) {
+  body {
+    font-size: 26px;
+  }
+}
+
+@media(max-width: 1100px) {
+  body {
+    font-size: 14px;
+  }
+}

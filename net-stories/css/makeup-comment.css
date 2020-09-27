@@ -1,0 +1,47 @@
+.comment {
+  display:flex;
+}
+
+.comment-avatar-container {
+  flex: 0 0 auto;
+}
+
+.comment-chip {
+  flex: 1 0 auto;
+  background: url("../img/comment-chip-bg.png") right 25px no-repeat;
+}
+
+.comment-content {
+  flex: 20 0 0;
+}
+
+.comment-text {
+  background-color: white;
+  font: 12px "Verdana";
+  line-height: 22px;
+  color: #424242;
+  padding: 14px;
+}
+
+.comment-shadow {
+  width: 100%;
+  height: 16px;
+  background: url("../img/shadow-right.png") right center no-repeat;
+}
+
+.comment-meta {
+  display: flex;
+  flex-wrap: wrap;
+  font: bold 11px "Trebuchet MS";
+  position: relative;
+  top: -10px;
+}
+
+.comment-date {
+  color: #cccabd;
+  margin-right: 5px;
+}
+
+.comment-username {
+  color: #827e63;
+}

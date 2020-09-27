@@ -1,0 +1,146 @@
+.feedback {
+  background: url("../../img/feedback-bg.png") no-repeat;
+  width: 25em;
+  height: 16.5em;
+  background-size: 100% 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feedback-lore {
+  font: 0.55em "Helvetica", sans-serif;
+  color: #828282;
+  margin: 0;
+  margin-bottom: 2.8em;
+  text-align: center;
+  padding: 0 4.2em;
+  word-break: break-all;
+}
+
+
+
+
+/*
+  form
+*/
+.feedback-form {
+  width: 17em;
+  margin: 0 auto;
+}
+
+.feedback-input {
+  display: block;
+  width: 100%;
+  font: 0.55em "Helvetica", sans-serif;
+  color: #7a7a7a;
+  border-radius: 3px;
+  border: 1px solid #d8d8d8;
+  outline: none;
+  padding: 0.9em;
+  margin-bottom: 0.6em;
+  transition: all 0.1s;
+}
+
+.feedback-input:last-of-type {
+  margin-bottom: 2.2em;
+}
+
+.feedback-input:focus {
+  border-color: #1287bf;
+  box-shadow: 0 0 5px -1px #1287bf;
+}
+
+
+
+
+/*
+  form - submit
+*/
+.feedback-submit-container {
+  text-align: center;
+}
+
+.feedback-submit {
+  font: bold 0.55em "Helvetica", sans-serif;
+  background-color: #de2b24;
+  outline: none;
+  color: #fff;
+  border-radius: 3px;
+  border: 0;
+  cursor: pointer;
+  padding: 1em 2.2em;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.feedback-submit:hover {
+  background-color: #fe2e27;
+}
+
+.feedback-submit:active {
+  background-color: #cf0c06;
+}
+
+
+
+
+/*
+  form - input placeholders
+*/
+.feedback-input::-webkit-input-placeholder {
+  color: #b0b0b0;
+}
+
+.feedback-input::-ms-input-placeholder {
+  color: #b0b0b0;
+}
+
+.feedback-input:-ms-input-placeholder {
+  color: #b0b0b0;
+}
+
+.feedback-input::placeholder {
+  color: #b0b0b0;
+}
+
+
+
+
+/*
+  mediaqueries
+*/
+@media(max-width: 720px) {
+  .feedback-lore {
+    padding: 0 4%;
+  }
+
+  .feedback-form {
+    width: 70%;
+  }
+}
+
+
+
+@media(max-width: 400px) {
+  .feedback {
+    height: auto;
+    padding: 0.9em 0 1em 0;
+    background-color: #fff;
+    border-radius: 3px;
+  }
+
+  .feedback-lore {
+    margin-bottom: 1em;
+    font-size: 0.45em;
+  }
+
+  .feedback-form {
+    width: 85%;
+  }
+
+  .feedback-input:last-of-type {
+    margin-bottom: 1.2em;
+  }
+}

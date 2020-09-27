@@ -1,0 +1,100 @@
+.thoughts-paster {
+  margin: 25px 0 80px 0;
+}
+
+.thoughts-paster-text {
+  height: 41px;
+  background: url("../img/past-your-thoughts.png") right center no-repeat;
+}
+
+.thoughts-paster-shadow {
+  height: 16px;
+  background: url("../img/shadow-double.png") top center no-repeat;
+  background-size: 100%;
+
+}
+
+.message-form {
+  background: url("../img/aside-bg.png");
+  padding: 15px;
+}
+
+.message-form-section {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.message-label {
+  font: 12px "Trebuchet MS";
+  color: #737269;
+  flex-basis: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: url("../img/body-bg.png");
+  box-sizing: border-box;
+  border-right: 2px solid #737269;
+  padding-right: 5px;
+}
+
+.message-label-textarea {
+  align-items: flex-start;
+  padding-top: 7px;
+}
+
+.message-field {
+  flex-grow: 1;
+  border: 0;
+  font: 14px "Trebuchet MS";
+  padding: 8px 0 8px 5px;
+}
+
+.message-field:focus {
+  outline: none;
+}
+
+.message-field-textarea {
+  resize: none;
+  height: 110px;
+  padding: 4px;
+}
+
+.message-submit {
+  margin: 0 auto;
+  width: 50%;
+  font: 18px "Trebuchet MS";
+  color: #737269;
+  background: url("../img/body-bg.png");
+  text-align: center;
+  padding: 5px 0;
+  user-select: none;
+}
+
+.message-submit:hover {
+  filter: brightness(1.025);
+}
+
+.message-submit:active {
+  filter: brightness(0.9);
+}
+
+
+@media(max-width: 350px) {
+  .message-form-section {
+    flex-direction: column;
+  }
+
+  .message-field {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .message-label {
+    border: none;
+    border-bottom: 2px solid #737269;
+    flex-basis: auto;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2px 0 2px 2px;
+  }
+}

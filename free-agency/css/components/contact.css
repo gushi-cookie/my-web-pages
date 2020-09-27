@@ -1,0 +1,102 @@
+.contact {
+  background-color: #f0f2f4;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.contact-wrap {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+
+
+
+/*
+  tel & spliter & email
+*/
+.contact-tel {
+  display: flex;
+  padding: 0.33em 0;
+  margin-left: auto;
+}
+
+.contact-spliter {
+  border-left: 1px solid #e2e2e2;
+  margin: 0 0.71em;
+}
+
+.contact-email {
+  display: flex;
+  padding: 0.33em 0;
+  margin-right: 0.5em;
+}
+
+.contact-text {
+  font: 0.71em "Helvetica", sans-serif;
+  color: #424242;
+}
+
+
+
+
+/*
+  facebook
+*/
+.contact-facebook {
+  margin-top: 0.166em;
+}
+
+.contact-facebook-icon {
+  background: url("../../img/icons.png") no-repeat;
+  background-size: 6.45em;
+  background-position: -2.15em -0.1em;
+  display: block;
+  width: 1.083em;
+  height: 1.083em;
+}
+
+
+
+
+/*
+  icons
+*/
+.contact-icon-tel {
+  width: 0.46em;
+  height: 0.75em;
+  background: url("../../img/icons.png") no-repeat;
+  background-size: 6.45em;
+  background-position: -0.083em -0.125em;
+  margin-right: 0.46em;
+}
+
+.contact-icon-email {
+  width: 0.833em;
+  height: 0.667em;
+  background: url("../../img/icons.png") no-repeat;
+  background-size: 6.45em;
+  background-position: -0.917em -0.125em;
+  margin-right: 0.33em;
+}
+
+
+
+
+/*
+  mediaqueries
+*/
+@media(max-width: 450px) {
+  .contact-wrap {
+    width: 96%;
+  }
+}
+
+@media(min-width: 1400px) {
+  .contact {
+    font-size: 1.4em;
+  }
+}

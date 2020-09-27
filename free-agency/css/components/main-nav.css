@@ -1,0 +1,50 @@
+.main-nav {
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0.3em 0;
+}
+
+.main-nav-link {
+  font: bold 0.7em "Helvetica", sans-serif;
+  color: #424242;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.main-nav-link:hover, .main-nav .active {
+  color: #de2b24;
+}
+
+.main-nav-link::after {
+  content: "";
+  position: relative;
+  bottom: 0.125em;
+  display: inline-block;
+  margin: 0 0.8em;
+  width: 5px;
+  height: 5px;
+  background: url("../../img/dot.png");
+  background-size: 100%;
+}
+
+.main-nav-link:last-child::after {
+  display: none;
+}
+
+
+
+
+/*
+  mediaqueries
+*/
+@media(max-width: 900px) {
+  .main-nav-link:first-of-type {
+    margin-left: auto;
+  }
+
+  .main-nav-link:last-of-type {
+    margin-right: auto;
+  }
+}

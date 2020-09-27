@@ -1,0 +1,39 @@
+.btn {
+  display: inline-block;
+  font-size: 0.6em;
+  color: #2b2b2b;
+  background-color: #f1ac11;
+  padding: 0.5em 2.2em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  
+  -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none; 
+            user-select: none;
+}
+
+.btn:hover {
+  background-color: #fcbd12;
+}
+
+.btn:active {
+  background-color: #f2a50f;
+  
+}
+
+.btn-detailed {
+  font-style: italic;
+  border-radius: 2px;
+  border-bottom: 2px solid #b47d00;
+  padding: 0.6em 1em;
+  color: #2b2b2b;
+}
+
+.btn-detailed:active {
+  border-bottom-color: #f1ac11;
+}

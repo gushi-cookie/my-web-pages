@@ -1,0 +1,49 @@
+.service {
+  max-width: 12.5em;
+}
+
+
+
+
+/*
+  text
+*/
+.service-header {
+  font: bold 1em "Helvetica", sans-serif;
+  color: #424242;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.service-lore {
+  font: 0.7em "OpenSans", sans-serif;
+  color: #5c5c5c;
+  text-align: center;
+  margin: 0;
+}
+
+
+
+
+/*
+  icons
+*/
+.service-icon {
+  margin: 0 auto;
+  background: url("../../img/services.png") no-repeat;
+  background-size: 12.92em;
+  width: 3.5em;
+  height: 3.375em;
+}
+
+.service-icon-like {
+  background-position: -0.208em 0;
+}
+
+.service-icon-book {
+  background-position: -9.96em 0;
+}
+
+.service-icon-chat {
+  background-position: -5.042em 0;
+}

@@ -1,0 +1,78 @@
+.dm-item {
+  display: flex;
+  flex-basis: 46%;
+  margin-bottom: 1.5em;
+}
+
+.dm-item-img-container {
+  flex-grow: 1;
+  flex-basis: 0;
+  margin-right: 1em;
+}
+
+.dm-item-img {
+  width: 100%;
+}
+
+.dm-item-info {
+  display: flex;
+  flex-direction: column;
+  flex: 4 0 0;
+  justify-content: space-between;
+
+  padding-top: 0.1em;
+  padding-bottom: 0.7em;
+}
+
+.dm-item-top {
+  display: flex;
+  align-items: baseline;
+}
+
+.dm-item-header {
+  margin: 0;
+}
+
+.dm-item-link {
+  text-decoration: none;
+  color: #2b2b2b;
+  font-size: 0.7em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.dm-item-black-dots {
+  flex-grow: 1;
+  height: 4px;
+  border-bottom: 0.09em dotted #2b2b2b;
+  margin: 0 0.2em 0 0.1em;
+}
+
+.dm-item-cost {
+  background: url("../img/bg/dm-item-cost.png");
+  background-size: 100% auto;
+  color: #2b2b2b;
+  font-size: 0.65em;
+  display: flex;
+  width: 2.7em;
+  height: 1.65em;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.dm-item-bottom {
+  align-items: baseline;
+  color: #bcbcbc;
+  display: flex;
+  font-size: 0.6em;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.dm-item-gray-dots {
+  height: 4px;
+  flex-grow: 1;
+  border-bottom: 2px dotted #bcbcbc;
+  margin: 0 0.4em;
+}

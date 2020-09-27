@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>free agency</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="js/jquery-3.5.0.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/defaults.css">
+  <link rel="stylesheet" href="css/components/buttons.css">
+  
+  <link rel="stylesheet" href="css/components/contact.css">
+
+  <link rel="stylesheet" href="css/containers/header.css">
+  <link rel="stylesheet" href="css/components/logo.css">
+  <link rel="stylesheet" href="css/components/main-nav.css">
+  <link rel="stylesheet" href="css/components/free-consult.css">
+
+  <link rel="stylesheet" href="css/components/banner.css">
+
+  <link rel="stylesheet" href="css/containers/about-us.css">
+  <link rel="stylesheet" href="css/components/section-head.css">
+  <link rel="stylesheet" href="css/components/service.css">
+
+  <link rel="stylesheet" href="css/containers/approach.css">
+  <link rel="stylesheet" href="css/components/step.css">
+
+  <link rel="stylesheet" href="css/containers/portfolio.css">
+  <link rel="stylesheet" href="css/components/project.css">
+
+  <link rel="stylesheet" href="css/containers/analysis.css">
+  <link rel="stylesheet" href="css/components/feedback.css">
+
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/social.css">
+  
+
+  <script>
+    function closeFeedback(event) {
+      let feedback = $("#feedback");
+      let cross = $("#feedbackCross");
+      let arrow = $("#analysisArrow");
+
+      feedback.hide("fold");
+      cross.hide();
+      arrow.css("transform", "rotate(180deg)");
+    }
+
+    function openFeedback(event) {
+      let feedback = $("#feedback");
+      let cross = $("#feedbackCross");
+      let arrow = $("#analysisArrow");
+
+      feedback.show("fold");
+      cross.delay(20).show("fade");
+      arrow.css("transform", "");
+    }
+  </script>
+
+</head>
+<body>
+  
+  <!-- contact -->
+  <section class="contact">
+    <div class="contact-wrap">
+      <div class="contact-tel">
+        <div class="contact-icon-tel"></div>
+        <div class="contact-text">6337 3128</div>
+      </div>
+      <div class="contact-spliter"></div>
+      <div class="contact-email">
+        <div class="contact-icon-email"></div>
+        <div class="contact-text">info@business.co</div>
+      </div>
+      <div class="contact-facebook">
+        <a class="contact-facebook-icon" href="#"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- logo & main-nav & free-consult -->
+  <header class="header">
+
+    <div class="logo">
+      <a class="logo-link" href="#">
+        <img class="logo-img" src="img/logo.png">
+      </a>
+    </div>
+
+    <nav class="main-nav">
+      <a class="main-nav-link active" href="#">Home</a>
+      <a class="main-nav-link" href="#">About Us</a>
+      <a class="main-nav-link" href="#">Our Approach</a>
+      <a class="main-nav-link" href="#">Our Work</a>
+    </nav>
+    
+    <div class="free-consult">
+      <a class="free-consult-btn btn btn-red" href="#">Free Consultation</a>
+    </div>
+
+  </header>
+
+  <!-- banner -->
+  <section class="banner">
+    <h1 class="banner-header">We Providing</h1>
+    <p class="banner-lore">Social Media marketing for businesses</p>
+    <div class="banner-btn-container">
+      <a class="banner-btn btn btn-yellow" href="#">free consultation</a>
+    </div>
+  </section>
+
+  <!-- about-us & services -->
+  <section class="about-us">
+
+    <div class="section-head">
+      <h2 class="section-head-header">About Us</h2>
+      <p class="section-head-lore">We are added our major Services</p>
+      <div class="section-head-bar"></div>
+    </div>
+
+    <div class="about-us-services">
+      
+      <div class="service">
+        <div class="service-icon service-icon-like"></div>
+        <h3 class="service-header">Facebook Marketing</h3>
+        <p class="service-lore">Lorem Ipsum is simply dummy text of the printing and typesetting industry. standard dummy text ever</p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon service-icon-book"></div>
+        <h3 class="service-header">landing pages Creation</h3>
+        <p class="service-lore">Lorem Ipsum is simply dummy text of the printing and typesetting industry. standard dummy text ever</p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon service-icon-chat"></div>
+        <h3 class="service-header">Ads management</h3>
+        <p class="service-lore">Lorem Ipsum is simply dummy text of the printing and typesetting industry. standard dummy text ever</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- approach & steps -->
+  <section class="approach">
+
+    <div class="section-head">
+      <h2 class="section-head-header">Our Approch</h2>
+      <p class="section-head-lore">Check Our approches step by step ( how we do it )</p>
+      <div class="section-head-bar"></div>
+    </div>
+
+    <div class="approach-steps">
+
+      <div class="step">
+        <div class="step-img-container">
+          <img class="step-img" src="img/steps/step-1.png">
+        </div>
+        <div class="step-content">
+          <h3 class="step-header">Step 1 : Heading Here</h3>
+          <p class="step-lore">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+        </div>
+        <div class="step-number step-number-first">
+          <div class="step-number-expand"></div>
+        </div>
+      </div>
+
+      <div class="step step-right">
+        <div class="step-img-container">
+          <img class="step-img" src="img/steps/step-2.png">
+        </div>
+        <div class="step-content">
+          <h3 class="step-header">Step 2 : Heading Here</h3>
+          <p class="step-lore">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+        </div>
+        <div class="step-number step-number-second">
+          <div class="step-number-expand"></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-img-container">
+          <img class="step-img" src="img/steps/step-3.png">
+        </div>
+        <div class="step-content">
+          <h3 class="step-header">Step 3 : Heading Here</h3>
+          <p class="step-lore">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+        </div>
+        <div class="step-number step-number-third">
+          <div class="step-number-expand"></div>
+        </div>
+      </div>
+
+      <div class="step step-right">
+        <div class="step-img-container">
+          <img class="step-img" src="img/steps/step-4.png">
+        </div>
+        <div class="step-content">
+          <h3 class="step-header">Step 4 : Heading Here</h3>
+          <p class="step-lore">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+        </div>
+        <div class="step-number step-number-fourth">
+          <div class="step-number-expand"></div>
+        </div>
+      </div>
+      
+    </div>
+
+  </section>
+
+  <!-- portfolio & projects -->
+  <section class="portfolio">
+
+    <div class="section-head section-head-white">
+      <h2 class="section-head-header" title="я не знал как это сделать. я не дизайнер...">Our Work</h2>
+      <p class="section-head-lore">We are added our featured works below (Hover header)</p>
+      <div class="section-head-bar"></div>
+    </div>
+
+    <div class="portfolio-projects">
+
+      <div class="project project-reversed">
+        <img class="project-img" src="img/projects/project-1.png">
+        <a class="project-link" href="#"></a>
+        <div class="project-info">
+          <div class="project-icon"></div>
+          <h3 class="project-header">Project Name</h3>
+          <p class="project-lore">Facebook marketing</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img class="project-img" src="img/projects/project-2.png">
+        <a class="project-link" href="#"></a>
+        <div class="project-info">
+          <div class="project-icon"></div>
+          <h3 class="project-header">One More Project</h3>
+          <p class="project-lore">Landing Page</p>
+        </div>
+      </div>
+
+      <div class="project project-reversed">
+        <img class="project-img" src="img/projects/project-3.png">
+        <a class="project-link" href="#"></a>
+        <div class="project-info">
+          <div class="project-icon"></div>
+          <h3 class="project-header">Third Project</h3>
+          <p class="project-lore">Some Description Here</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img class="project-img" src="img/projects/project-4.png">
+        <a class="project-link" href="#"></a>
+        <div class="project-info">
+          <div class="project-icon"></div>
+          <h3 class="project-header">Almost Fifth</h3>
+          <p class="project-lore">One More Description</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img class="project-img" src="img/projects/project-5.png">
+        <a class="project-link" href="#"></a>
+        <div class="project-info">
+          <div class="project-icon"></div>
+          <h3 class="project-header">Near Fourth Project</h3>
+          <p class="project-lore">We Need More Text</p>
+        </div>
+      </div>
+
+      <div class="project project-reversed">
+        <img class="project-img" src="img/projects/project-6.png">
+        <a class="project-link" href="#"></a>
+        <div class="project-info">
+          <div class="project-icon"></div>
+          <h3 class="project-header">Sixth Project Name</h3>
+          <p class="project-lore">Lorem Ispum Dolor Sit Amet</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img class="project-img" src="img/projects/project-7.png">
+        <a class="project-link" href="#"></a>
+        <div class="project-info">
+          <div class="project-icon"></div>
+          <h3 class="project-header">Seventh Project Name</h3>
+          <p class="project-lore">Good Description</p>
+        </div>
+      </div>
+
+      <div class="project project-reversed">
+        <img class="project-img" src="img/projects/project-8.png">
+        <a class="project-link" href="#"></a>
+        <div class="project-info">
+          <div class="project-icon"></div>
+          <h3 class="project-header">Last Project Name</h3>
+          <p class="project-lore">Auf Der Heider Bluht...</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- analysis & feedback -->
+  <section class="analysis">
+
+    <div class="analysis-head">
+      <h2 class="analysis-header">Get Your Free Facebook Analysis Now</h2>
+      <p class="analysis-lore">Enter your details below</p>
+    </div>
+
+    <div class="analysis-arrow" id="analysisArrow" onclick="openFeedback(event)"></div>
+
+    <div class="analysis-feedback-container">
+      <div class="feedback" id="feedback">
+        <p class="feedback-lore">Sit down with our experts to receive a free customized marketing plan for your business + Learn How To Use Google and Facebook to get 5000% ROI or more</p>
+        <form class="feedback-form">
+          <input class="feedback-input" name="name" placeholder="Your Name" required>
+          <input class="feedback-input" name="tel" placeholder="Contact Number" type="tel" required>
+          <input class="feedback-input" name="compname" placeholder="Company Name" required>
+          <div class="feedback-submit-container">
+            <button class="feedback-submit">submit now</button>
+          </div>
+        </form>
+      </div>
+      
+      <div class="analysis-cross" onclick="closeFeedback(event)" id="feedbackCross"></div>
+    </div>
+
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <h2 class="footer-header">Get in touch</h2>
+    <div class="footer-socials">
+      <a class="social social-facebook" href="#"></a>
+      <a class="social social-twitter" href="#"></a>
+      <a class="social social-google-plus" href="#"></a>
+      <a class="social social-linked-in" href="#"></a>
+    </div>
+    <form class="footer-form">
+      <p class="footer-form-lore">Subscribe to our newsletter to stay update with what is new</p>
+      <input class="footer-input" name="email" type="email" placeholder="Email Address" required>
+      <div class="footer-submit-contaner">
+        <button class="footer-submit" type="submit">Subscribe</button>
+      </div>
+    </form>
+    <div class="footer-lower">
+      <p class="footer-lower-lore">Cssauthor.com © 2014 All Rights Reserved</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+.main-content {
+  padding: 44px 44px 0 0;
+  box-sizing: border-box;
+}
+
+
+@media(max-width: 950px) {
+  .main-content {
+    padding-right: 22px;
+  }
+  
+}
+
+@media(max-width: 780px) {
+  .main-content {
+    padding-right: 1%;
+  }
+  
+}
+
+@media(max-width: 600px) {
+  .main-content {
+    padding-right: 0;
+  }
+}

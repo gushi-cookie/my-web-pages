@@ -1,0 +1,176 @@
+.step {
+  display: flex;
+  background-color: #fff;
+  border-radius: 3px;
+  position: relative;
+  box-shadow: 0 0 12px -8px black;
+}
+
+
+
+
+/*
+  image
+*/
+.step-img-container {
+  flex: 1 0 0;
+}
+
+.step-img {
+  display: block;
+  width: 100%;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+
+
+
+/*
+  text
+*/
+.step-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 2 0 0;
+  padding: 0 6.5%;
+}
+
+.step-header {
+  font: bold 0.85em "Helvetica", sans-serif;
+  color: #424242;
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+
+.step-lore {
+  font: 0.65em "OpenSans", sans-serif;
+  color: #5c5c5c;
+  margin: 0;
+  line-height: 1.5em;
+}
+
+
+
+
+/*
+  number
+*/
+.step-number {
+  /* display: none; */
+  position: absolute;
+  background: url("../../img/steps-icons.png");
+  background-size: 430%;
+  width: 9.266%;
+  left: 24.2%;
+  top: 28%;
+}
+
+.step-number-expand {
+  padding-top: 100%;
+}
+
+.step-number-second {
+  background-position: 33.75% 0;
+}
+
+.step-number-third {
+  background-position: 67.2% 0;
+}
+
+.step-number-fourth {
+  background-position: 100% 0;
+}
+
+
+
+
+/*
+  right - img
+*/
+.step-right .step-img-container{
+  order: 2;
+}
+
+.step-right .step-img {
+  border-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+
+
+
+/*
+  right - text
+*/
+.step-right .content {
+  order: 1;
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.step-right .step-header {
+  text-align: right;
+}
+
+.step-right .step-lore {
+  text-align: right;
+}
+
+
+
+
+/*
+  right - number
+*/
+.step-right .step-number {
+  left: 66.25%;
+}
+
+
+
+
+/*
+  mediaqueries
+*/
+@media(min-width: 1400px) {
+  .step-content {
+    padding: 0 7.5%;
+  }
+
+  .step-number {
+    left: 23.6%;
+  }
+
+  .step-right .step-number {
+    left: 67%;
+  }
+}
+
+
+
+@media(max-width: 900px) {
+  .step {
+    flex-direction: column;
+  }
+
+  .step-img-container {
+    order: 1;
+  }
+
+  .step-content {
+    order: 2;
+    padding: 1em 0.8em;
+  }
+
+  .step-header, .step-lore {
+    text-align: left !important;
+  }
+
+  .step-number {
+    display: none;
+  }
+}

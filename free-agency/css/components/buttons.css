@@ -1,0 +1,42 @@
+.btn {
+  display: inline-block;
+  font-family: "Helvetica", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.1s;
+}
+
+
+.btn-yellow {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  padding: 1em 2em;
+  color: #fff;
+  background-color: #f8cd53;
+  border-radius: 4px;
+}
+
+.btn-yellow:hover {
+  background-color: #f6c12e;
+}
+
+.btn-yellow:active {
+  background-color: #e4b327;
+}
+
+
+.btn-red {
+  font-size: 0.7em;
+  background-color: #de2b24;
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.55em 1.4em;
+}
+
+.btn-red:hover {
+  background-color: #f12a22;
+}
+
+.btn-red:active {
+  background-color: #d6231c;
+}

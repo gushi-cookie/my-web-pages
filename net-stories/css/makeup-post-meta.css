@@ -1,0 +1,45 @@
+.post-meta {
+  display: flex;
+  width: 100%;
+  font: 12px "Trebuchet MS";
+  color: #635f44;
+  align-items: baseline;
+  padding: 0 0 15px 1%;
+}
+
+.post-tags {
+  display: flex;
+}
+
+.post-tag::after {
+  display: inline-block;
+  content: "";
+  width: 2px;
+  height: 2px;
+  background-color: #635f44;
+  margin: 0 3px;
+  margin-bottom: 6%;
+  align-self: center;
+}
+
+.post-tag:last-child::after {
+  display: none;
+}
+
+.post-date {
+  color: #7a7a7a;
+}
+
+.post-vertical-line {
+  width: 1px;
+  height: 10px;
+  background-color: #7a7a7a;
+  margin: 0 7px;
+}
+
+
+@media(max-width: 400px) {
+  .post-meta {
+    flex-wrap: wrap;
+  }
+}

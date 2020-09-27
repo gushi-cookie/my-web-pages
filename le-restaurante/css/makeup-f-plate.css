@@ -1,0 +1,58 @@
+.f-plate {
+  margin: 0 auto;
+  
+  background: url("../img/bg/f-plate-bg.png");
+  background-size: 100% auto;
+  width: 23em;
+  height: 13.4em;
+  box-sizing: border-box;
+  padding: 2.6em 2.2em 2.8em 2.2em;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.f-plate-header {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1.3em;
+}
+
+.f-plate-middle-container {
+  display: flex;
+}
+
+.f-plate-logo {
+  display: flex;
+  flex-basis: 65%;
+  align-items: center;
+}
+
+.f-plate-address {
+  flex-basis: 35%;
+  text-align: left;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.f-plate-icon {
+  width: 2.3em;
+  height: 1.55em;
+  margin-right: 1em;
+  background: url("../img/icons/footer-logo-bell.png");
+  background-size: 100% auto;
+}
+
+.f-plate-link {
+  color: #f1ac11;
+  text-decoration: none;
+}
+
+.f-plate-btn {
+  font-size: 0.65em;
+}

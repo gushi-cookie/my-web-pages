@@ -1,0 +1,86 @@
+.footer-upper {
+  display: flex;
+  flex-wrap: wrap;
+  background: url("../img/header/bg.png");
+  padding-bottom: 28px;
+}
+
+.footer-lower {
+  display: flex;
+  flex-wrap: wrap;
+  background: url("../img/header/bg-red.png");
+}
+
+.footer-about-me-column {
+  flex: 0 0 44%;
+  margin-left: auto;
+}
+
+.footer-socials-column {
+  flex: 0 0 34%;
+  margin-right: auto;
+}
+
+.footer-copyright-column {
+  flex: 0 0 78%;
+  margin: 0 auto;
+  padding: 9px 0;
+}
+
+@media(max-width: 950px) {
+  .footer-about-me-column {
+    flex: 0 0 50%;
+  }
+  
+  .footer-socials-column {
+    flex: 0 0 40%;
+  }
+
+  .footer-copyright-column {
+    flex: 0 0 90%;
+  }
+}
+
+@media(max-width: 780px) {
+  .footer-about-me-column {
+    flex: 0 0 54%;
+  }
+  
+  .footer-socials-column {
+    flex: 0 0 44%;
+  }
+
+  .footer-copyright-column {
+    flex: 0 0 98%;
+  }
+}
+
+@media(max-width: 600px) {
+  .footer-about-me-column {
+    flex: 0 0 90%;
+    margin: 0 auto 40px auto;
+  }
+  
+  .footer-socials-column {
+    flex: 0 0 90%;
+    margin: 0 auto;
+  }
+
+  .footer-copyright-column {
+    flex: 0 0 90%;
+  }
+}
+
+@media(max-width: 350px) {
+  .footer-about-me-column {
+    flex: 0 0 95%;
+  }
+  
+  .footer-socials-column {
+    flex: 0 0 95%;
+  }
+
+  .footer-copyright-column {
+    flex: 0 0 95%;
+  }
+}

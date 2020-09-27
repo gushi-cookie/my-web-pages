@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<title>Net Stories</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="./js/vue.js"></script>
+
+<link rel="stylesheet" href="./css/normalize.min.css">
+<link rel="stylesheet" href="./css/general.css">
+
+<link rel="stylesheet" href="./css/columns-header.css">
+<link rel="stylesheet" href="./css/columns-main.css">
+<link rel="stylesheet" href="./css/columns-footer.css">
+
+<link rel="stylesheet" href="./css/makeup-header.css">
+<link rel="stylesheet" href="./css/makeup-main-content.css">
+
+<link rel="stylesheet" href="./css/makeup-aside.css">
+<link rel="stylesheet" href="./css/makeup-random-posts.css">
+<link rel="stylesheet" href="./css/makeup-latest-photos.css">
+<link rel="stylesheet" href="./css/makeup-recent-comments.css">
+
+<link rel="stylesheet" href="./css/makeup-post-header.css">
+<link rel="stylesheet" href="./css/makeup-post-meta.css">
+<link rel="stylesheet" href="./css/makeup-post-main.css">
+<link rel="stylesheet" href="./css/makeup-post-comments.css">
+<link rel="stylesheet" href="./css/makeup-comment.css">
+
+<link rel="stylesheet" href="./css/makeup-message-form.css">
+
+<link rel="stylesheet" href="./css/makeup-footer.css">
+<link rel="stylesheet" href="./css/makeup-about-me.css">
+<link rel="stylesheet" href="./css/makeup-socials.css">
+
+<script>
+  function toggleManu(e) {
+    let menu = document.getElementById("menu");
+    let button = e.target;
+    let isActive = button.getAttribute("data-is-active") == "true" ? true : false;
+
+    if(isActive) {
+      menu.style.display = "none";
+    }else {
+      menu.style.display = "block";
+    }
+
+    button.setAttribute("data-is-active", !isActive);
+  }
+
+  function pastThought(e) {
+    let username = document.getElementById("username").value;
+    let text = document.getElementById("comment").value;
+    let date = new Date();
+
+    mainPostApp.comments.push({
+      "username": username,
+      "avatar": "./img/avatars/img1.png",
+      "text": text,
+      "date": date.getDate() + " "+ date.getMonth() + ", " + date.getFullYear()
+    });
+  }
+</script>
+
+<header class="header">
+  <div class="header-left-angle">
+    <div class="border"></div>
+  </div>
+
+  <div class="header-logo">
+    <div class="border">
+      <a href="#">net stories</a>
+    </div>    
+  </div>
+
+  <div class="header-middle-spliter">
+    <div class="border-bottom"></div>
+    <div class="border-left"></div>
+  </div>
+
+  <nav class="header-nav">
+    <a href="#">Home</a>
+    <a class="active" href="#">Blog</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Photos</a>
+    <a href="#">Extras</a>
+    <a href="#">Contacts</a>
+  </nav>
+
+  <div class="toggle-nav">
+    <span class="toggler" onclick="toggleManu(event);" data-is-active="false"></span>
+    <div class="menu" id="menu">
+      <div class="border">
+        <a href="#">Home</a>
+        <a class="active" href="#">Blog</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Photos</a>
+        <a href="#">Extras</a>
+        <a href="#">Contacts</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-right-angle"></div>
+</header>
+
+<div class="horizontal-line"></div>
+
+<main>
+  <section class="main-content">
+    <section id="main-post" class="post">
+      <post-header
+        v-bind:imgsrc = "imgSrc"
+        v-bind:likes = "likes"
+        v-bind:title = "title"
+        v-bind:isliked = "isLiked"
+      ></post-header>
+
+      <post-meta
+        v-bind:date = "date"
+        v-bind:tags = "tags"
+        v-bind:commentsamount = "commentsAmount"
+      ></post-meta>
+
+      <post-main
+        v-bind:content = "content"
+        v-bind:socialsforshare = "socialsForShare"
+        v-bind:ishtml = "isContentHTML"
+      ></post-main>
+
+      <div class="post-comments">
+        <comment
+        v-for = "comment in comments"
+        v-bind:avatar = "comment.avatar"
+        v-bind:text = "comment.text"
+        v-bind:date = "comment.date"
+        v-bind:username = "comment.username"
+      ></comment>
+      </div>
+    </section>
+
+    <div class="thoughts-paster">
+      <div class="thoughts-paster-text"></div>
+      <form class="message-form">
+        
+        <div class="message-form-section">
+          <label class="message-label" for="username"><span>name:</span></label>
+          <input class="message-field" id="username" type="text">
+        </div>
+
+        <div class="message-form-section">
+          <label class="message-label" for="email"><span>email:</span></label>
+          <input class="message-field" id="email" type="email">
+        </div>
+
+        <div class="message-form-section">
+          <label class="message-label message-label-textarea" for="comment"><span>comment:</span></label>
+          <textarea class="message-field message-field-textarea" id="comment"></textarea>
+        </div>
+
+        <div class="message-submit" onclick="pastThought(event);">Submit!</div>
+      </form>
+      <div class="thoughts-paster-shadow"></div>
+    </div>
+  </section>
+
+  <aside class="aside">
+    <section id="totally-random">
+      <div class="aside-section-title">
+        <h3>Totally Random</h3>
+      </div>
+
+      <div class="aside-section-content">
+        <random-post 
+          v-for = "post in randomPosts"
+          v-bind:sourcelink = "post.sourceLink"
+          v-bind:isliked = "post.isLiked"
+          v-bind:likes = "post.likes"
+          v-bind:title = "post.title"
+          v-bind:imgsrc = "post.imgSrc"
+          v-bind:text = "post.text"
+        ></random-post>
+      </div>
+    </section>
+
+    <section id="latest-photos">
+      <div class="aside-section-title">
+        <h3>Latest Photos</h3>
+      </div>
+      <div class="aside-section-content">
+        <latest-photo
+          v-for = "photo in photos"
+          v-bind:link = "photo.link"
+          v-bind:imgsrc = "photo.imgSrc"
+        ></latest-photo>
+      </div>
+      <div class="more-photos">
+        <a href="#">more photos</a><span class="more-photos-icon"></span>
+      </div>
+    </section>
+
+    <section id="recent-comments">
+      <div class="aside-section-title">
+        <h3>Recent Comments</h3>
+      </div>
+
+      <div class="aside-section-content">
+        <recent-comment
+          v-for = "comment in comments"
+          v-bind:sourcelink = "comment.sourceLink"
+          v-bind:imgsrc = "comment.imgSrc"
+          v-bind:text = "comment.text"
+          v-bind:highlight = "comment.highlight"
+        ></recent-comment>
+      </div>
+    </section>
+  </aside>
+</main>
+
+<div class="horizontal-line"></div>
+
+<footer class="footer">
+  <div class="footer-upper">
+    <div class="footer-upper-border"></div>
+    <div class="footer-about-me-column">
+
+      <div class="about-me">
+        <div class="about-me-top">
+          <h3 class="about-me-header">About me</h3>
+        </div>
+        <div class="about-me-content">
+          <div class="about-me-avatar-container">
+            <img class="about-me-avatar" src="./img/avatars/img3.png">
+          </div>
+          <div class="about-me-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-socials-column">
+      <div class="socials">
+        <div class="socials-top">
+          <h3 class="socials-header">Social</h3>
+          <div class="socials-links">
+            <a class="socials-link" href="#">
+              <span class="socials-icon dribbble-icon"></span>
+            </a>
+
+            <a class="socials-link" href="#">
+              <span class="socials-icon facebook-icon"></span>
+            </a>
+
+            <a class="socials-link" href="#">
+              <span class="socials-icon twitter-icon"></span>
+            </a>
+
+            <a class="socials-link" href="#">
+              <span class="socials-icon youtube-icon"></span>
+            </a>
+
+            <a class="socials-link" href="#">
+              <span class="socials-icon rss-icon"></span>
+            </a>
+          </div>
+        </div>
+        <div class="socials-content">
+          <div class="socials-twitty-icon"></div>
+          <div class="socials-text">
+            <a class="socials-latest-post-twitter" href="#">@Lorem_Ipsum</a> is simply dummy text of the printing and typesetting industry. <span class="socials-latest-post-time">24 minutes ago</span>
+          </div>
+        </div>
+        <div class="socials-latest-tweet-img"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-lower">
+    <div class="footer-lower-border"></div>
+    <div class="footer-copyright-column">
+      <div class="copyright">
+        Copyright 2012 Panagiotis <a href="#" class="copyright-link">Tsamoudakis<span class="copyright-link-com">.com</span></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./js/main.js" type="module"></script>

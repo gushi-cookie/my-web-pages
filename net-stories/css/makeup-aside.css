@@ -1,0 +1,25 @@
+.aside {
+  background: url("../img/aside-bg.png");
+  padding-top: 44px;
+}
+
+.aside-section-title {
+  display: flex;
+  background: url("../img/aside-header-line.png") left center no-repeat;
+  background-size: 100%;
+  margin-bottom: 16px;
+}
+
+.aside-section-title h3 {
+  font: 16px "Daniel";
+  color: #3d3e3d;
+  background: url("../img/aside-bg.png");
+  margin: 0;
+  margin-left: 5%;
+  padding: 0 4px;
+}
+
+.aside-section-content {
+  width: 95%;
+  margin: 0 auto;
+}

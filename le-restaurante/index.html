@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Le Restaraunte</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="./js/vue.js"></script>
+
+    <link rel="stylesheet" href="./css/bootstrap-carousel.css">
+    <script src="./js/bootstrap/popper.min.js"></script>
+    <script src="./js/bootstrap/jquery-3.5.0.min.js"></script>
+    <script src="./js/bootstrap/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/columns-header.css">
+    <link rel="stylesheet" href="css/makeup-footer.css">
+    <link rel="stylesheet" href="css/makeup-logo.css">
+    <link rel="stylesheet" href="css/makeup-main-nav.css">
+    <link rel="stylesheet" href="css/makeup-header-plate.css">
+    <link rel="stylesheet" href="css/makeup-daily-menu.css">
+    <link rel="stylesheet" href="css/makeup-dm-item.css">
+
+    <link rel="stylesheet" href="css/makeup-online-menu.css">
+    <link rel="stylesheet" href="css/makeup-om-item.css">
+
+    <link rel="stylesheet" href="css/makeup-f-plate.css">
+
+    <link rel="stylesheet" href="css/makeup-f-nav.css">
+    <link rel="stylesheet" href="css/makeup-newsletter.css">
+  </head>
+  <body>
+    
+    <header class="header">
+    <div class="header-content">
+
+      <div class="header-top-column">
+        <div class="logo">
+          <span class="logo-icon"></span>
+          <a class="logo-link" href="#">LeRestaurante</a>
+          <div class="logo-expand"></div>
+        </div>
+        <nav class="main-nav">
+          <a class="main-nav-item active" href="#">PRICE LIST</a>
+          <a class="main-nav-item" href="#">OPENING HOURS</a>
+          <a class="main-nav-item" href="#">ABOUT US</a>
+          <a class="main-nav-item" href="#">CONTACTS</a>
+        </nav>
+      </div>
+
+      <div class="header-bottom-column">
+        <div class="header-plate header-plate-pale">
+          <h3 class="header-plate-h3">For meat<br>lovers</h3>
+          <div class="btn">full menu</div>
+        </div>
+        <div class="header-plate header-plate-middle">
+          <h3 class="header-plate-h3">Vegetarian<br>& Vegan</h3>
+          <div class="btn">full menu</div>
+        </div>
+        <div class="header-plate header-plate-pale">
+          <h3 class="header-plate-h3">see our<br>secrets</h3>
+          <div class="btn">take me there</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="header-expand"></div>
+    </header>
+  
+    <main class="main">
+      
+      <div id="daily-menu">
+        <h2 class="daily-menu-header">Daily Menu</h2>
+        <div class="vegan-check-container">
+          <label class="vegan-check-label" for="vegan-check">
+            <input class="vegan-check-checkbox" id="vegan-check" v-model="onlyVeganMenu" type="checkbox">
+            <span class="vegan-check-mark"></span>
+            Show vegan menu only
+          </label>
+        </div>
+
+        <div v-if="onlyVeganMenu" class="daily-menu-items">
+          <dm-item
+            v-for = "item in items"
+            v-if = "item.veganFood"
+            v-bind:imgsrc = "item.imgSrc"
+            v-bind:header = "item.header"
+            v-bind:cost = "item.cost"
+            v-bind:allergens = "item.allergens"
+            v-bind:veganfood = "item.veganFood"
+            v-bind:link = "item.link"
+          ></dm-item>
+        </div>
+        <div v-else class="daily-menu-items">
+          <dm-item
+              v-for = "item in items"
+              v-bind:imgsrc = "item.imgSrc"
+              v-bind:header = "item.header"
+              v-bind:cost = "item.cost"
+              v-bind:allergens = "item.allergens"
+              v-bind:veganfood = "item.veganfood"
+              v-bind:link = "item.link"
+            ></dm-item>
+        </div>
+      </div>
+
+      <div class="online-menu carousel slide carousel-fade" id="online-menu-carousel">
+        <div class="online-menu-control-container">
+          <a class="online-menu-control online-menu-prev" href="#online-menu-carousel" data-slide="prev">prev offer</a>
+        </div>
+        <div class="online-menu-content carousel-inner">
+          <div v-for = "(item, index) in items" class="carousel-item" v-bind:class="{ 'active': index == 0 ? true : false }">
+            <om-item
+              v-bind:imgsrc = "item.imgSrc"
+              v-bind:header = "item.header"
+              v-bind:description = "item.description"
+              v-bind:buttontext = "item.buttonText"
+            ></om-item>
+          </div>
+        </div>
+        <div class="online-menu-control-container">
+          <a class="online-menu-control online-menu-next" href="#online-menu-carousel" data-slide="next">next offer</a>
+        </div>
+      </div>
+
+    </main>
+  
+    <footer class="footer">
+      <div class="footer-top">
+
+        <div class="f-plate">
+          <h2 class="f-plate-header">Where to find us?</h2>
+
+          <div class="f-plate-middle-container">
+            <div class="f-plate-logo">
+              <span class="f-plate-icon"></span>
+              <a class="f-plate-link" href="#">LeRestaurante</a>
+            </div>
+
+            <div class="f-plate-address">Hršpic 128<br>Pardubice, 530 01</div>
+          </div>
+
+          <div class="f-plate-btn-container">
+            <div class="f-plate-btn btn btn-detailed">show on a map</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-container">
+
+          <nav class="f-nav">
+            <div class="f-nav-block">
+              <h3 class="f-nav-header">about us</h3>
+              <ul class="f-nav-list">
+                <li class="f-nav-li">
+                  <a class="f-nav-link" href="#">our story</a>
+                </li>
+                <li class="f-nav-li">
+                  <a class="f-nav-link" href="#">suppliers</a>
+                </li>
+                <li class="f-nav-li">
+                  <a class="f-nav-link" href="#">new & updates</a>
+                </li>
+                <li class="f-nav-li">
+                  <a class="f-nav-link" href="#">franchise</a>
+                </li>
+              </ul>
+            </div>
+            <div class="f-nav-block">
+              <h3 class="f-nav-header">for you</h3>
+              <ul class="f-nav-list">
+                <li class="f-nav-li">
+                  <a class="f-nav-link" href="#">reviews</a>
+                </li>
+                <li class="f-nav-li">
+                  <a class="f-nav-link" href="#">facebook</a>
+                </li>
+                <li class="f-nav-li">
+                  <a class="f-nav-link" href="#">instagram</a>
+                </li>
+                <li class="f-nav-li">
+                  <a class="f-nav-link" href="#">career</a>
+                </li>
+              </ul>
+            </div>
+            <div class="f-nav-block">
+              <h3 class="f-nav-header">useful links</h3>
+              <ul class="f-nav-list">
+                <li class="f-nav-li">
+                  <a class="f-nav-link" href="#">map of web</a>
+                </li>
+                <li class="f-nav-li">
+                  <a class="f-nav-link" href="#">pertners</a>
+                </li>
+                <li class="f-nav-li">
+                  <a class="f-nav-link" href="#">mobile app</a>
+                </li>
+                <li class="f-nav-li">
+                  <a class="f-nav-link" href="#">other</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="newsletter">
+            <h3 class="newsletter-header">sign up to our newsletter</h3>
+            <form class="newsletter-form">
+              <input class="newsletter-input" type="email" name="mail" placeholder="e-mail address">
+              <div class="newsletter-submit btn btn-detailed">sign up</div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/main.js" type="module"></script>
+  
+  </body>
+</html>

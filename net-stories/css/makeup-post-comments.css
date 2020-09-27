@@ -1,0 +1,23 @@
+.post-comments .comment {
+  margin-bottom: 25px;
+}
+.post-comments .comment:last-child {
+  margin-bottom: 0;
+}
+
+
+@media(max-width: 350px) {
+  .post-comments .comment {
+    flex-direction: column;
+  }
+  .post-comments .comment-chip {
+    height: 10px;
+    width: 10px;
+    margin-left: 5%;
+    transform: rotate(90deg);
+  }
+
+  .post-comments .comment-text {
+    padding: 4px;
+  }
+}

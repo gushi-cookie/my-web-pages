@@ -1,0 +1,82 @@
+.socials-top {
+  padding: 8px 0;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #444545;
+  margin-bottom: 18px;
+}
+
+.socials-content {
+  display: flex;
+}
+
+.socials-header {
+  font: 22px "Pacifico";
+  color: #f7f6f0;
+  margin: 0;
+  margin-right: auto;
+}
+
+.socials-links {
+  display: flex;
+  flex-basis: 150px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.socials-twitty-icon {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  background: url("../img/icons.png") -179px -22px;
+  margin-right: 1%;
+}
+
+.socials-text {
+  font: 12px "Tahoma";
+  color: #a7a7a7;
+}
+
+.socials-latest-post-twitter {
+  color: #ecebe5;
+  text-decoration: none;
+}
+
+.socials-latest-post-time {
+  font-size: 10px;
+  color: #595858;
+}
+
+.socials-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/icons.png");
+}
+
+.socials-latest-tweet-img {
+  height: 40px;
+  background: url("../img/latest-tweet.png") right center no-repeat;
+}
+
+.socials-icon:hover {
+  background-position-y: -30px;
+}
+
+
+.facebook-icon {
+  background-position-x: -26px;
+}
+
+.twitter-icon {
+  background-position-x: -50px;
+}
+
+.youtube-icon {
+  background-position-x: -75px;
+}
+
+.rss-icon {
+  background-position-x: -101px;
+}

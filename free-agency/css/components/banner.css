@@ -1,0 +1,51 @@
+.banner {
+  background: url("../../img/banner-bg.png") top center;
+  background-size: cover;
+  text-align: center;
+  padding: 8.5em 0;
+}
+
+.banner-header {
+  font: bold 1.8em "Helvetica", sans-serif;
+  color: #fff;
+  margin: 0;
+}
+
+.banner-lore {
+  font: 300 1em "Helvetica", sans-serif;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+
+
+
+/*
+  mediaqueries
+*/
+@media(min-width: 1400px) {
+  .banner {
+    font-size: 1.2em;
+  }
+}
+
+
+
+@media(max-width: 700px) {
+  .banner {
+    padding: 5em 0;
+  }
+}
+
+
+
+@media(max-width: 500px) {
+  .banner {
+    font-size: 0.75em;
+  }
+
+  .banner-btn {
+    font-size: 0.85em;
+  }
+}
